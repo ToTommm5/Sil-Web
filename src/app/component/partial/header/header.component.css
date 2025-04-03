@@ -1,0 +1,12 @@
+
+
+  @font-face {
+    font-family: "JoyCircuit";
+    src: url("/fonts/JOYCIRCU.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .joy-circuit-font {
+    font-family: 'JoyCircuit', sans-serif;
+  }

@@ -1,0 +1,47 @@
+<header class="bg-orange-500 text-white p-4 flex justify-between items-center">
+  <p class="font-bold joy-circuit-font">Sil informatique</p>
+
+
+  <nav class="flex items-center gap-4">
+    <a href="/" class="mx-2 hover:text-gray-700 flex items-center gap-2">
+      <mat-icon>home</mat-icon>
+      Accueil
+    </a>
+
+    <!-- Menu déroulant Services -->
+    <div class="relative group">
+      <!-- Lien Services -->
+      <a
+        href="/service"
+        class="mx-2 hover:text-gray-700 flex items-center gap-2"
+      >
+        <mat-icon>build</mat-icon>
+        Services <mat-icon>arrow_drop_down</mat-icon>
+      </a>
+
+      <!-- Liste des services (ajout de la transition pour l'animation) -->
+      <div
+        class="absolute left-0 top-full bg-gray-300 text-gray-900 shadow-md rounded opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-300 ease-in-out flex-col w-48 py-2 z-10"
+      >
+        <a href="/service/vente" class="block px-4 py-2 hover:bg-gray-200"
+          >Vente</a
+        >
+        <a href="/service/windev" class="block px-4 py-2 hover:bg-gray-200"
+          >Développement</a
+        >
+        <a href="/service" class="block px-4 py-2 hover:bg-gray-200"
+          >Maintenance</a
+        >
+      </div>
+    </div>
+    <a href="#contact" class="mx-2 hover:text-gray-700 flex items-center gap-2">
+      <mat-icon>phone</mat-icon>Contact
+    </a>
+    <a
+      href="https://www.nanosystems.it/public/download/Supremo.exe"
+      class="mx-2 hover:text-gray-700 flex items-center gap-2"
+    >
+      <mat-icon>cloud_download</mat-icon>Supremo
+    </a>
+  </nav>
+</header>

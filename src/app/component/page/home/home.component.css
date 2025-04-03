@@ -1,0 +1,61 @@
+.btn-slide {
+  display: inline-flex;
+  align-items: center;
+  background-color: #ffffff;  /* Fond initial */
+  color: #ff6600;  /* Couleur initiale du texte */
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ff6600;  /* Bordure initiale */
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;  /* Assure que l'effet de gradient ne déborde pas */
+}
+
+.btn-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ff6600, #f97316);  /* Gradient de couleur */
+  transition: transform 0.3s ease-in-out;
+  transform: scaleX(0);  /* Cache le gradient initialement */
+  transform-origin: right;
+  z-index: 1;  /* S'assure que le gradient est en dessous du texte et de l'icône */
+}
+
+.btn-slide:hover::before {
+  transform: scaleX(1);  /* Affiche le gradient au survol */
+  transform-origin: left;
+}
+
+.btn-slide:hover {
+  color: #ffffff;  /* Texte blanc au survol */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  /* Ombrage plus prononcé */
+  border-color: #ff6600;  /* Bordure colorée au survol */
+  transform: scale(1.05);  /* Agrandit légèrement le bouton */
+}
+
+.btn-slide span {
+  position: relative;  /* Assure que le texte est au-dessus du gradient */
+  z-index: 2;  /* Texte au-dessus du gradient */
+  transition: color 0.3s ease-in-out;
+}
+
+.btn-slide:hover span {
+  color: #ffffff;  /* Texte devient blanc au survol */
+}
+
+.btn-slide mat-icon {
+  position: relative;
+  z-index: 2;  /* L'icône reste au-dessus du gradient */
+  transition: color 0.3s ease-in-out;
+}
+
+.btn-slide:hover mat-icon {
+  color: #ffffff;  /* L'icône devient blanche au survol */
+}

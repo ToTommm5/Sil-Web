@@ -1,13 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>SilWeb</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>SilWeb</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --primary-color: #ff6600; /* Orange */
+        --secondary-color: #333333; /* Gris foncé */
+      }
+      .text-primary-color {
+        color: var(--primary-color);
+      }
+      .bg-primary-color {
+        background-color: var(--primary-color);
+      }
+      .bg-secondary-color {
+        background-color: var(--secondary-color);
+      }
+
+      @font-face {
+        font-family: "JoyCircuit";
+        src: url("fonts/JOYCIRCU.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body class="mat-typography">
+    <app-root></app-root>
+  </body>
 </html>
